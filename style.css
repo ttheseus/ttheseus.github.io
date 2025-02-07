@@ -154,16 +154,16 @@ h1 {
 .img {
   position: absolute;
   z-index: 2;
-  border: 2px solid #538899;
 }
 
 .content-container .img {
   background: url('assets/img1.png');
   background-size: cover;
-  background-position: 0px -40px;
+  background-position: 0px -150px;
   background-repeat: no-repeat;
   border-radius: 5px;
-  margin-top: 5px;
+  border: 2px solid #935ba8;
+  margin-top: 3px;
   width: 95%;
   height: 40%;
 }
@@ -215,7 +215,7 @@ h1 {
 }
 
 .socials a{
-  color:#522062;
+  color:#935ba8;
   font-weight: 300;
   font-size: 14px;
   text-decoration: none;
