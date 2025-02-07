@@ -1,23 +1,221 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*
+
+COLOR PALETTE
+
+light pink: #faccd0
+blue: #538899
+light blue: #a8fcfe
+dark pink: #f80780
+dark purple: #522062
+white: #e9e2ee
+
+*/
+
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Nunito", sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  background: #8bc6ec;
-  background-image: linear-gradient(135deg, #8bc6ec 0%, #9899e2 100%);
-  min-height: 100vh;
+  background: linear-gradient(to bottom, #538899 25%, #faccd0 100%), 
+              url('assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  height: 100vh;
+  margin: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #e9e2ee;
 }
 
-.container {
-  background: #000000;
+h1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 100;
+  letter-spacing: 7px;
+  display: flex;
+  justify-content: center;
+  font-size: 30;
+}
+
+#current-time {
+  font-family: "Nunito", sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+#current-date {
+  font-family: "Nunito", sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+/* DIVISIONS */
+
+.main {
+  position: absolute;
+  align-self: center;
+  background: transparent;
   padding: 25px;
-  width: 350px;
+  width: 650px;
+  height: 510px;
+  border-radius: 15px;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in forwards;
+  z-index: 0;
+  border: 2px solid white;
+}
+
+.header1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0px;
+  background-color: transparent;
+  top: 15px;
+  left: 5px;
+  width: fit-content;
+  z-index: 1;
+}
+
+.content-container {
+  position: relative;
+  top: -30px;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+  background-color: #e9e2ee;
+  border-radius: 15px;
+  height: 310px;
+  width: auto;
+}
+
+.time-container {
+  position: relative;
+  top: -50px;
+  left: 0px;
+  background-color: transparent;
+  color: #e9e2ee;
+  text-align: right;
+}
+
+.date-container {
+  position: relative;
+  top: -45px;
+  left: 0px;
+  background-color: transparent;
+  color: #e9e2ee;
+  text-align: right;
+}
+
+.socials {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 35px;
+  top: 50px;
+  color:#522062;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  background-color: transparent;
+  border-top: 2px solid white;
+}
+
+.socials a{
+  font-weight: 300;
+  font-size: 14px;
+  text-decoration: none;
+  align-items: center;
+}
+
+.socials a:hover {
+  color:#538899;
+}
+
+/* BUTTONS */
+
+button {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #522062;
+  color: #faccd0;
+  border: transparent;
   border-radius: 10px;
+  z-index: 2;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: -4px; 
+  left: -4px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px solid #522062;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: width 0.5s ease, height 0.5s ease;
+  opacity: 1;
+}
+
+button.inButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: right;
+  font-size: 14.5px;
+  padding: 6px 15px;
+  height: 35px;
+  top: 325px;
+  left: 0px;
+  width: 167px;
+  pointer-events: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+button.inButtons::before {
+  content: '';
+  position: absolute;
+  bottom: 7px; /* Position the underline beneath the text */
+  left: 16px;
+  width: 0px; /* Initially no width */
+  height: 0.9px; /* Underline thickness */
+  background-color: #faccd0; /* Underline color */
+  transition: width 0.5s ease-in-out; /* Animate the width */
+  opacity: 1;
+}
+
+button.inButtons:hover::before {
+  width: 80%; /* Expands to full width on hover */
+}
+
+/* GFX */ 
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
