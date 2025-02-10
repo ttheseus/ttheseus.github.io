@@ -189,7 +189,7 @@ h2 {
 }
 
 .content-container .img {
-  background: url('assets/img1.png');
+  background: url('assets/img1.PNG');
   background-size: cover;
   background-position: 0px -150px;
   background-repeat: no-repeat;
