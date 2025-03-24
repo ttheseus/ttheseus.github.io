@@ -47,13 +47,6 @@ white: #f2eef5
     font-size: 30;
   }
   
-  h2 {
-    font-family: "Nunito", sans-serif;
-    font-weight: 300;
-    letter-spacing: 2px;
-    font-size: 20px;
-  }
-  
   #header {
     font-family: "Inconsolata", sans-serif;
     font-size: 14px;
@@ -93,24 +86,6 @@ white: #f2eef5
     border: 2px solid #f2eef5;
   }
   
-  .main-AC {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background: transparent;
-    padding: 25px;
-    width: 650px;
-    height: auto;
-    border-radius: 15px;
-    opacity: 0;
-    animation: fadeIn 0.6s ease-in forwards;
-    z-index: 0;
-    border: 2px solid #f2eef5;
-  }
-  
   .header1 {
     position: relative;
     display: flex;
@@ -125,32 +100,6 @@ white: #f2eef5
     z-index: 1;
   }
   
-  .header1-AC {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0px;
-    background-color: transparent;
-    top: 15px;
-    left: 5px;
-    width: fit-content;
-    z-index: 1;
-  }
-  
-  .header2 {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    top: 100px;
-    color: #538899;
-    text-shadow: 2px 1px 2px rgb(255, 66, 14), -1px -2px 3px rgb(0, 166, 255);
-    z-index: 2;
-    animation: chromaticMove 4500ms ease infinite;
-  }
-  
   .content-container {
     position: relative;
     top: -30px;
@@ -162,22 +111,6 @@ white: #f2eef5
     justify-content: center;
     background-color: #f2eef5;
     background-image: linear-gradient(to bottom, #a8fcfe -5%, #f2eef5 20%, #f2eef5 80%, #f7a8c4 130%);
-    border-radius: 15px;
-    height: 310px;
-    width: auto;
-  }
-  
-  .content-container-AC {
-    position: static;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    display: flex;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    justify-content: center;
-    background-color: #f2eef5;
     border-radius: 15px;
     height: 310px;
     width: auto;
@@ -447,20 +380,6 @@ white: #f2eef5
   
     100% {
       transform: scale(1);
-    }
-  }
-  
-  @keyframes chromaticMove {
-    0% {
-      text-shadow: 2px 1px 2px rgb(255, 66, 14), -1px -2px 3px rgb(0, 166, 255);
-    }
-  
-    50% {
-      text-shadow: 2px 1px 2px rgb(255, 66, 14), -1px -2px 3px rgb(0, 166, 255);
-    }
-  
-    100% {
-      text-shadow: 2px 1px 2px rgb(255, 66, 14), -1px -2px 3px rgb(0, 166, 255);
     }
   }
   
